@@ -28,7 +28,7 @@ Click the + (plus) button at the top right, then select New Userscript.
 Step 3: Paste the Code
 Erase any default placeholder text inside the editor.
 
-Copy the entire code from seyon_autopilot.js in this repository.
+Copy the entire code from "Wolsey like button fix made by seyon" in this repository.
 
 Paste it directly into the Violentmonkey editor window.
 
