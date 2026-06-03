@@ -1,4 +1,4 @@
-Seyon Ultimate Master Autopilot
+Seyon Ultimate Master Autopilot Or call me goose whatever really.
 A lightweight autopilot userscript built to force-correct layout alignments on the Wolsey Hall Oxford Community forum.
 
 If the forum tries to break or reset the "voted-yes" like button styling, this script overrides it on a continuous 3-second loop to keep your interface looking flawless and pixel-perfect.
@@ -40,4 +40,4 @@ Head over to https://social.wolseyhalloxfordcommunity.org.uk/
 The script will automatically activate and keep your layout perfect on autopilot!
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details. Created with hard work and pixel-tweaking by Seyon.
+This project is licensed under the MIT License - see the LICENSE file for details. Created with hard work and pixel-tweaking by Seyon Or goose as you might call me there.
