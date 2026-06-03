@@ -1,0 +1,60 @@
+// ==UserScript==
+// @name         Seyon Ultimate Master Autopilot
+// @namespace    violentmonkey
+// @match        https://social.wolseyhalloxfordcommunity.org.uk/*
+// @grant        none
+// @version      1.0
+// @run-at       document-end
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // putting your code into a function so it can run on a loop
+    function applySeyonFix() {
+        // check if your style is already there so we don't spam the page
+        if (document.getElementById('seyon-master-fix')) return;
+
+        var seyonUltimateMasterFix = document.createElement('style');
+        seyonUltimateMasterFix.id = 'seyon-master-fix';
+        seyonUltimateMasterFix.innerHTML = `
+            a.voted-yes i.icon-like-alt {
+                visibility: hidden !important;
+                opacity: 0 !important;
+                width: 0 !important;
+                height: 0 !important;
+                margin: 0 !important;
+                position: absolute !important;
+            }
+            a.voted-yes {
+                position: relative !important;
+                padding-left: 40px !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: 20px !important;
+                background: none !important;
+            }
+            a.voted-yes::before {
+                content: "" !important;
+                position: absolute !important;
+                left: 15px !important;        
+                top: 72% !important;        
+                transform: translateY(-50%) !important;
+                width: 18px !important;
+                height: 18px !important;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M2 10h3v10H2zm19-1c0-1.1-.9-2-2-2h-5.5l.92-4.65c.02-.13.02-.27-.03-.4l-.85-2.58L10.24 4.58c-.15.15-.24.36-.24.58V18c0 .55.45 1 1 1h6.31c.72 0 1.35-.47 1.55-1.16l2.77-9.24c.08-.25.11-.52.11-.79l-.02-.81z"/></svg>') !important;
+                background-repeat: no-repeat !important;
+                background-size: contain !important;
+                transition: transform 0.1s ease !important;
+            }
+        `;
+        document.head.appendChild(seyonUltimateMasterFix);
+    }
+
+    // run it instantly when the page loads
+    applySeyonFix();
+
+    // then re-run it every 3 seconds to keep it active on autopilot
+    setInterval(applySeyonFix, 3000);
+})();
